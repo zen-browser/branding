@@ -2,6 +2,9 @@ name: Upload to bunny
  
 on:
   workflow_dispatch:
+  push: 
+   branches:
+     - main
  
 jobs:
   upload:
@@ -24,6 +27,5 @@ jobs:
       - name: Change Directory and Run Go File 
         run: |
           cd upload 
-          ls
           go run main.go ${{ secrets.STORAGE_PASSWORD }} ${{ secrets.STORAGE_NAME }}
           
