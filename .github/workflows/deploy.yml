@@ -17,6 +17,9 @@ jobs:
       - name: cd to upload
         run: cd upload
 
+      - name: ls
+        run: ls
+
       - name: Set up Go
         uses: actions/setup-go@v5
         with:
