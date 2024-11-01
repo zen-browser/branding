@@ -14,20 +14,16 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-
-      - name: ls
-        run: ls
-    
-      - name: cd to upload
-        run: cd /upload
-
-      - name: ls
-        run: ls
-
       - name: Set up Go
         uses: actions/setup-go@v5
         with:
           go-version: ${{ matrix.go-version }}
 
-      - name: run upload
-        run: go run main.go ${{ secrets.STORAGE_PASSWORD }} ${{ secrets.STORAGE_NAME }}
+      - name: List Directory Contents 
+        run: ls
+      - name: Change Directory and Run Go File 
+        run: |
+          cd upload 
+          ls
+          go run main.go ${{ secrets.STORAGE_PASSWORD }} ${{ secrets.STORAGE_NAME }}
+          
