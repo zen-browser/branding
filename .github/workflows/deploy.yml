@@ -1,0 +1,26 @@
+name: Upload to bunny
+ 
+on:
+  workflow_dispatch:
+ 
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        go-version: [1.22.3]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+    
+      - name: cd to upload
+        run: cd upload
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: ${{ matrix.go-version }}
+
+      - name: run upload
+        run: go run main.go ${{ secrets.STORAGE_PASSWORD }} ${{ secrets.STORAGE_NAME }}
