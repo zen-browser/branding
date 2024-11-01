@@ -19,7 +19,7 @@ jobs:
         run: ls
     
       - name: cd to upload
-        run: cd upload
+        run: cd /upload
 
       - name: ls
         run: ls
