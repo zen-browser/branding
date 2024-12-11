@@ -8,5 +8,5 @@ Zen Browser Branding
 </h1>
 
 <p>The Zen logo's and icons are all licensed under CC BY-NC-SA 4.0</p>
-<p>CDN: https://cdn-zen-assets.b-cdn.net/path/to/file</p>
+<p>CDN: https://branding-assets-zen-browser.b-cdn.net/path/to/file</p>
 </div>
