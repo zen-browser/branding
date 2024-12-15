@@ -1,6 +1,6 @@
 <div align="center">
 <picture>
-    <img src="./Main icons/SVG/zen-mantis.svg" width="128px">
+    <img src="./Beta (Dec 2024)/SVG/Zen-Dark-Coral.svg" width="128px">
 </picture>
 
 <h1 align="center">
