@@ -1,4 +1,4 @@
-name: Upload to bunny
+name: Deploy to BunnyCDN
  
 on:
   workflow_dispatch:
@@ -6,16 +6,12 @@ on:
 jobs:
   upload:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        go-version: [1.22.3]
-
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Deploy to BunnyCDN
-        uses: ayeressian/bunnycdn-storage-deploy@v2.2.4
+        uses: ayeressian/bunnycdn-storage-deploy@v2
         with:
           source: ""
           destination: ""
@@ -24,5 +20,3 @@ jobs:
           upload: "true"
           remove: "false"
           purgePullZone: "false"
-
-          
